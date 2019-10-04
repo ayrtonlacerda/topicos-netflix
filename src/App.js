@@ -1,26 +1,46 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from 'react';
+import ItemsCarousel from 'react-items-carousel';
+import {
+  Container,
+  ContainerElement,
+  InfoContainer,
+  Element
+} from './styles';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+
+class App extends Component {
+
+  componentWillMount() {
+    this.setState({
+      children: [],
+      activeItemIndex: 0,
+    });
+
+    setTimeout(() => {
+      this.setState({
+        children: this.createChildren([1, 2, 3, 4, 5, 6, 7, 8, 9, 0]),
+      })
+    }, 100);
+  }
+
+  createChildren = n => n.map(i => <div key={i} style={{ height: 200, background: '#333', width: 300 }}>{i}</div>);
+
+  changeActiveItem = (activeItemIndex) => this.setState({ activeItemIndex });
+
+  render() {
+    const {
+      activeItemIndex,
+      children,
+    } = this.state;
+
+
+    return (
+      <Container>
+        <InfoContainer />
+        <ContainerElement />
+      </Container>
+    );
+  }
 }
 
 export default App;
