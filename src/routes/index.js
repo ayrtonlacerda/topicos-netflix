@@ -5,8 +5,8 @@ import DetailsScreen from '../screens/Details';
 
 const AppRouter = () => (
   <Switch>
-    <Route path="/home" component={() => <HomeScreen />} />
-    <Route path="/details" component={() => <DetailsScreen />} />
+    <Route path="/home" component={props => <HomeScreen {...props} />} />
+    <Route path="/details" component={props => <DetailsScreen {...props} />} />
   </Switch>
 )
 
