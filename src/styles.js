@@ -3,7 +3,6 @@ import styled from 'styled-components';
 
 export const Container = styled.div`
   display: flex;
-  flex-direction: row;
   flex: 1;
   height: 100vh;
   width: 100vw;
@@ -12,6 +11,23 @@ export const Container = styled.div`
   justify-content: center;
   border-style: none;
   margin: -8px;
+`;
+
+export const ScrollContent = styled.section`
+  display: flex;
+  flex-direction: row;
+  flex: 1;
+  width: 50px;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  overscroll-behavior-x: auto;
+`;
+
+export const TestDiv = styled.div`
+  height: 230px;
+  width: 230px;
+  background-color: #fff;
+  margin: 3px;
 `;
 
 export const Element = styled.image`
