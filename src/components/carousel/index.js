@@ -3,6 +3,11 @@ import './styles.css';
 import { Link } from 'react-router-dom';
 import { Card } from './styles';
 
+/*
+ Nessa classe, deve adicionar elementos dentro da tag card ja criada
+ como titulo detalhes ranking entre outros
+ para ser apresentado na tela inicial
+*/
 
 class Carousel extends Component {
   state = {
@@ -22,7 +27,6 @@ class Carousel extends Component {
               <Link to={{ pathname: "/details", state: item }}>
                 <Card />
               </Link>
-
             </div>
           )}
         </div>

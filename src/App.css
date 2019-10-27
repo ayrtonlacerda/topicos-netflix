@@ -1,11 +1,27 @@
-.scrolling-wrapper {
-  overflow-x: scroll;
-  overflow-y: hidden;
-  white-space: nowrap;
-
-  
+@font-face {
+  font-family: 'Roboto-Bold';
+  font-style: normal;
+  font-weight: normal;
+  src: url('./assets/fonts/Roboto-Bold.ttf') format('opentype');
 }
 
-.card {
-  display: inline-block;
+@font-face {
+  font-family: 'Roboto-Medium';
+  font-style: normal;
+  font-weight: normal;
+  src: url('./assets/fonts/Roboto-Medium.ttf') format('opentype');
+}
+
+@font-face {
+  font-family: 'Roboto-Black';
+  font-style: normal;
+  font-weight: normal;
+  src: url('./assets/fonts/Roboto-Black.ttf') format('opentype');
+}
+
+@font-face {
+  font-family: 'Roboto-Regular';
+  font-style: normal;
+  font-weight: normal;
+  src: url('./assets/fonts/Roboto-Regular.ttf') format('opentype');
 }

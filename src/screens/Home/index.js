@@ -2,6 +2,11 @@ import React, { Component } from 'react';
 import { Container } from './styles';
 import Carousel from '../../components/carousel';
 
+/* 
+adicionar a logo do netflix no inicio da pagina
+
+todas as fontes estão em perfeito funcionamento, para usa-las so ver o arquivo app.css para descobri o nome
+*/
 const arrayTest = [
   {
     "popularity": 290.086,
@@ -409,6 +414,11 @@ class HomeScreen extends Component {
     arrayMovie: [
       {}
     ]
+  }
+
+  componentWillMount() {
+    // fazer a requisição de filmes populares e algun outro de sua escolha
+    // utilizando axion
   }
 
   navigatedetails = props => {
